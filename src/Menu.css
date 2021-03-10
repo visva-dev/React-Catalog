@@ -15,3 +15,12 @@
   gap: 25px;
   min-width: 280px;
 }
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
