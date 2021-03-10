@@ -4,6 +4,7 @@ import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
 import './Login.css';
 
 function Login() {
+  const [email, setEmail] = useState('')
   return (
     <div className='login'>
       <div className='login__header'>
@@ -21,6 +22,10 @@ function Login() {
       </div>
       <div className="login__info">
         <h1>Sign In</h1>
+        <form className='login__form'>
+          <label htmlFor="email">Email</label>
+          <input type="email" id='email' value={email} onChange={}/>
+        </form>
       </div>
     </div>
   );
