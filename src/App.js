@@ -10,6 +10,7 @@ import {
 import Menu from './Menu';
 import HeaderBlock from './HeaderBlock';
 import Login from './Login';
+import Signup from './Signup';
 import { selectUser } from './features/userSlice';
 import { useSelector } from 'react-redux';
 
@@ -29,6 +30,9 @@ function App() {
             {user ? <Redirect to='/teslaaccount' /> : <Login />}
             <Login />
           </Route>
+          <Route exact path='/signup'>
+          <Signup />
+        </Route>
         </Switch>
       </div>
     </Router>
