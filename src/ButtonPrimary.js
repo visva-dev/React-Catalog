@@ -2,9 +2,9 @@ import React from 'react';
 import './ButtonPrimary.css';
 
 function ButtonPrimary({name, type, onClick}) {
-  return <div className='buttonPrimary' onClick={onClick} type={type}>
+  return <button className='buttonPrimary' onClick={onClick} type={type}>
       {name}
-    </div>
+    </button>
 }
 
 export default ButtonPrimary
