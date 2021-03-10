@@ -5,6 +5,7 @@ import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <div className='login'>
       <div className='login__header'>
@@ -29,6 +30,14 @@ function Login() {
             id='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label htmlFor='email'>Password</label>
+          <input
+            type='password'
+            id='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </form>
       </div>
