@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
 import ButtonPrimary from './ButtonPrimary';
@@ -7,6 +7,10 @@ import './Login.css';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const signIn = (e) => {
+    e.preventDefault()
+  }
   return (
     <div className='login'>
       <div className='login__header'>
@@ -40,8 +44,14 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <ButtonPrimary name='Sign In' type='submit' onClick={signin} />
+          <ButtonPrimary name='Sign In' type='submit' onClick={signIn} />
         </form>
+        <div className="login__divider">
+          <hr/> <span>OR</span> <hr/>
+        </div>
+        <Link to='/signup'>
+          <ButtonSecondary name='create account'/>
+        </Link>
       </div>
     </div>
   );
