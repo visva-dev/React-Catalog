@@ -44,3 +44,21 @@
   border-bottom-width: 2px;
   color: black;
 }
+
+.headerBlock__actions {
+  margin-top: 330px;
+  display: flex;
+  gap: 20px
+}
+
+.headerBlock__actions > button {
+  cursor: pointer;
+  border: none;
+  width: 260px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+}
