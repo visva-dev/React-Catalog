@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
+import ButtonPrimary from './ButtonPrimary';
 import './Login.css';
 
 function Login() {
@@ -39,6 +40,7 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <ButtonPrimary name='Sign In' type='submit' onClick={signin} />
         </form>
       </div>
     </div>
