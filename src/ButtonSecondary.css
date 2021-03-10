@@ -11,3 +11,8 @@
   transition: all 0.2s ease-in-out;
   outline: none;
 }
+
+.buttonSecondary:hover {
+  background-color: #171a20;
+  color: white;
+}
