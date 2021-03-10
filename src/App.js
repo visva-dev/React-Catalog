@@ -11,6 +11,7 @@ function App() {
       <div className="App">
           <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           {isMenuOpen && <Menu />}
+          <HeaderBlock />
       </div>
     </Router>
   );
