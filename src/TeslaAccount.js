@@ -1,19 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import './TeslaAccount.css';
-import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from './features/userSlice';
+import Car from './Car';
+import { auth } from './firebase'
 
 function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
   const user = useSelector(selectUser);
-  const logoutofApp = () => {};
+  const dispatch = useDispatch()
+  const history = useHistory()
+  const logoutofApp = () => {
+    auth
+      .signOut()
+      .then(() => {
+        dispatch(logout());
+        history.push('/');
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div className='teslaAccount'>
       <div className='teslaAccount__header'>
         <div className='teslaAccount__logo'>
-          <Link>
+          <Link to='/'>
             <img
               src='https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png'
               alt='logo'
@@ -40,7 +52,7 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
       </div>
       <div className='teslaAccount__info'>
         <div className='teslaAccount__person'>
-          <h4>{user?.displayName + "'s"}</h4>
+          <h4>{user?.displayName + "'s"} Tesla</h4>
         </div>
         <div className='teslaAccount__infoRight'>
           <Link>Home</Link>
@@ -49,9 +61,16 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
           <Link onClick={logoutofApp}>Sign out</Link>
         </div>
       </div>
-      <div className="teslaAccount__car">
-        <Car imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-models@2x.jpg?20170815' model='model s' testDrive/>
-        <Car imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx@2x.jpg?20170815' model='model x'/>
+      <div className='teslaAccount__car'>
+        <Car
+          imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-models@2x.jpg?20170815'
+          model='model s'
+          testDrive
+        />
+        <Car
+          imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx@2x.jpg?20170815'
+          model='model x'
+        />
       </div>
     </div>
   );
