@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import './TeslaAccount.css';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
-  const logoutofApp = () => {
-    
-  }
+  const user = useSelector(selectUser);
+  const logoutofApp = () => {};
   return (
     <div className='teslaAccount'>
       <div className='teslaAccount__header'>
@@ -36,6 +37,21 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
             {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
           </div>
         </div>
+      </div>
+      <div className='teslaAccount__info'>
+        <div className='teslaAccount__person'>
+          <h4>{user?.displayName + "'s"}</h4>
+        </div>
+        <div className='teslaAccount__infoRight'>
+          <Link>Home</Link>
+          <Link>Account</Link>
+          <Link>History</Link>
+          <Link onClick={logoutofApp}>Sign out</Link>
+        </div>
+      </div>
+      <div className="teslaAccount__car">
+        <Car imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-models@2x.jpg?20170815' model='model s' testDrive/>
+        <Car imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx@2x.jpg?20170815' model='model x'/>
       </div>
     </div>
   );
