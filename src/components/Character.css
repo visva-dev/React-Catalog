@@ -1,0 +1,28 @@
+.CharacterContainer {
+  border-radius: 6px;
+  width: 266px;
+  background-color: #282727;
+  position: relative;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.CharacterContainer > a > img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 266px;
+  height: 300px;
+  border-bottom: 2px solid #9e4f60;
+}
+
+.CharacterContainer > a > h1 {
+  padding: 8px;
+  display: inline-block;
+  color: #ddd;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: color 125ms;
+}
