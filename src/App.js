@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import { selectCharacter } from './features/characterSlice';
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   const [characters, setCharacters] = useState([]);
