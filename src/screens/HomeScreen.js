@@ -18,7 +18,7 @@ function HomeScreen({ characters }) {
           )
       )}
       {value < characters.length && (
-        <button onClick={handleShowMore}>SHOW MORE</button>
+        <button className='button' onClick={handleShowMore}>SHOW MORE</button>
       )}
     </div>
   );
