@@ -8,7 +8,7 @@ function CharacterScreen() {
   const character = useSelector(selectCharacter);
 
   return (
-    <div className='ScreenContainer'>
+    <div className="ScreenContainer">
       {' '}
       <CharacterCard character={character} />
     </div>

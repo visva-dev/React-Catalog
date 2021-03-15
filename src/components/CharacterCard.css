@@ -19,6 +19,8 @@
   width: 30vw;
   padding: 20px;
   background-color: #282727;
+  color: #aaa;
+  text-transform: capitalize;
 }
 
 .CharacterInfo > h1 {
@@ -38,14 +40,10 @@
   margin-top: 20px;
 }
 
-.CharacterInfo > p, a {
+.CharacterInfo > p,
+a {
   color: #9e4f60;
   transition: color 125ms;
   text-transform: capitalize;
   text-decoration: none;
-}
-
-.CharacterInfo {
-  color: #aaa;
-  text-transform: capitalize;
 }

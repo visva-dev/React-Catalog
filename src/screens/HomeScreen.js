@@ -10,15 +10,14 @@ function HomeScreen({ characters }) {
   };
 
   return (
-    <div className='CharactersContainer'>
+    <div className="CharactersContainer">
       {characters.map(
-        (character, index) =>
-          index < value && (
-            <Character character={character} key={character.id} />
-          )
+        (character, index) => index < value && (
+        <Character character={character} key={character.id} />
+        ),
       )}
       {value < characters.length && (
-        <button className='button' onClick={handleShowMore}>SHOW MORE</button>
+        <button className="button" onClick={handleShowMore}>SHOW MORE</button>
       )}
     </div>
   );

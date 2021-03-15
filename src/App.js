@@ -4,13 +4,13 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import About from './About';
 import CharacterScreen from './screens/CharacterScreen';
-import { useSelector } from 'react-redux';
 import { selectCharacter } from './features/characterSlice';
-import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
 
   useEffect(() => {
     async function fetchCharacters() {
-      let res = await fetch(
-        'https://akabab.github.io/starwars-api/api/all.json'
+      const res = await fetch(
+        'https://akabab.github.io/starwars-api/api/all.json',
       );
-      let data = await res.json();
+      const data = await res.json();
       setCharacters(data);
     }
 
@@ -32,22 +32,22 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Header />
           <HomeScreen characters={characters} />
         </Route>
-        <Route exact path='/character/:id'>
+        <Route exact path="/character/:id">
           {character ? (
             <>
               <Header />
               <CharacterScreen />
             </>
           ) : (
-            <Redirect path='/' />
+            <Redirect path="/" />
           )}
         </Route>
         <Route>
-          <About about={About}/>
+          <About about={About} />
         </Route>
       </Switch>
     </Router>

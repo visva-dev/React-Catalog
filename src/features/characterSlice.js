@@ -14,6 +14,6 @@ export const characterSlice = createSlice({
 
 export const { setCharacter } = characterSlice.actions;
 
-export const selectCharacter = (state) => state.character.character;
+export const selectCharacter = state => state.character.character;
 
 export default characterSlice.reducer;

@@ -24,23 +24,21 @@ function Character({ character }) {
           species: character.species,
           masters: character.masters,
           wiki: character.wiki,
-        })
+        }),
       );
     }
   };
 
   return (
-    <div className='CharacterContainer'>
+    <div className="CharacterContainer">
       <Link to={`/character/${character.name}`} onClick={handleCharacter}>
         <img
           src={
             character.id === 28
-              ? (character.image =
-                  'https://static.wikia.nocookie.net/starwars/images/4/46/Monmothma.jpg/revision/latest?cb=20070615234013')
+              ? (character.image = 'https://static.wikia.nocookie.net/starwars/images/4/46/Monmothma.jpg/revision/latest?cb=20070615234013')
               : character.id === 77
-              ? (character.image =
-                  'https://static.wikia.nocookie.net/starwars/images/8/8b/SanHillHS-AOTC.png/revision/latest?cb=20200730024920')
-              : character.image
+                ? (character.image = 'https://static.wikia.nocookie.net/starwars/images/8/8b/SanHillHS-AOTC.png/revision/latest?cb=20200730024920')
+                : character.image
           }
           alt={character.name}
         />
