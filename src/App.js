@@ -7,7 +7,6 @@ import {
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import CharacterScreen from './screens/CharacterScreen';
-import Navbar from './components/Navbar';
 import { useSelector } from 'react-redux';
 import { selectCharacter } from './features/characterSlice';
 import { useEffect, useState } from 'react';
@@ -34,7 +33,6 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Header />
-          <Navbar />
           <HomeScreen characters={characters} />
           <Footer />
         </Route>
@@ -42,7 +40,6 @@ function App() {
           {character ? (
             <>
               <Header />
-              <Navbar />
               <CharacterScreen />
               <Footer />
             </>
