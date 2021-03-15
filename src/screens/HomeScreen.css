@@ -1,0 +1,9 @@
+.CharactersContainer {
+  display: flex;
+  margin-top: 200px;
+  padding: 30px;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  background-color: #151515;
+}

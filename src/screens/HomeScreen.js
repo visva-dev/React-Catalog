@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Character from '../components/Character';
+import './HomeScreen.css';
 
 function HomeScreen({ characters }) {
   const [value, setValue] = useState(12);
@@ -9,7 +10,7 @@ function HomeScreen({ characters }) {
   };
 
   return (
-    <>
+    <div className='CharactersContainer'>
       {characters.map(
         (character, index) =>
           index < value && (
@@ -19,7 +20,7 @@ function HomeScreen({ characters }) {
       {value < characters.length && (
         <button onClick={handleShowMore}>SHOW MORE</button>
       )}
-    </>
+    </div>
   );
 }
 
