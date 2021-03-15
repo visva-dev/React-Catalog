@@ -6,11 +6,11 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
+import About from './About';
 import CharacterScreen from './screens/CharacterScreen';
 import { useSelector } from 'react-redux';
 import { selectCharacter } from './features/characterSlice';
 import { useEffect, useState } from 'react';
-import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -35,18 +35,19 @@ function App() {
         <Route exact path='/'>
           <Header />
           <HomeScreen characters={characters} />
-          <Footer />
         </Route>
         <Route exact path='/character/:id'>
           {character ? (
             <>
               <Header />
               <CharacterScreen />
-              <Footer />
             </>
           ) : (
             <Redirect path='/' />
           )}
+        </Route>
+        <Route>
+          <About about={About}/>
         </Route>
       </Switch>
     </Router>
