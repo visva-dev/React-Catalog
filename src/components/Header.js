@@ -11,6 +11,9 @@ function Header() {
           alt=''
         />
       </Link>
+      <Link to='/about'>
+        <h1>About</h1>
+      </Link>
     </div>
   );
 }
