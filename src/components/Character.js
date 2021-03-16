@@ -1,6 +1,10 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable no-return-assign */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { setCharacter } from '../features/characterSlice';
 import './Character.css';
 
@@ -47,7 +51,12 @@ function Character({ character }) {
         <h1>{character.name}</h1>
       </Link>
     </div>
+
   );
 }
+
+Character.propTypes = {
+  character: PropTypes.node.isRequired,
+};
 
 export default Character;

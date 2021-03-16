@@ -1,4 +1,7 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/jsx-key */
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CharacterCard.css';
 
 function CharacterCard({ character }) {
@@ -41,15 +44,13 @@ function CharacterCard({ character }) {
         </span>
         <h4>SPECIES</h4>
         <span>{character?.species}</span>
-        <h4>WIKI</h4>
-        <a href={character?.wiki} target="_blank" rel="noreferrer">
-          Read more about
-          {' '}
-          {character?.name}
-        </a>
       </div>
     </div>
   );
 }
+
+CharacterCard.propTypes = {
+  character: PropTypes.node.isRequired,
+};
 
 export default CharacterCard;

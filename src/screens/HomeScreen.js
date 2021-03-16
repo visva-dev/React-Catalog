@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Character from '../components/Character';
 import './HomeScreen.css';
 
@@ -13,14 +14,20 @@ function HomeScreen({ characters }) {
     <div className="CharactersContainer">
       {characters.map(
         (character, index) => index < value && (
-        <Character character={character} key={character.id} />
+          <Character character={character} key={character.id} />
         ),
       )}
       {value < characters.length && (
-        <button className="button" onClick={handleShowMore}>SHOW MORE</button>
+        <button className="button" type="button" onClick={handleShowMore}>
+          SHOW MORE
+        </button>
       )}
     </div>
   );
 }
+
+HomeScreen.propTypes = {
+  characters: PropTypes.node.isRequired,
+};
 
 export default HomeScreen;
