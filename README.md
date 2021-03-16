@@ -1,16 +1,19 @@
 # React Calculator project
 
-This is the Capstone project at Microverse which uses the Star-Wars api. The app fetches the Star Wars characters 25 perpage and you can see more details of the character if you'd like to. This is a "catalogue of clothes for dogs" based project.
+This is the Capstone project at Microverse which uses the Star-Wars api. The app fetches the Star Wars characters 12 perpage and you can see more details of the character if you'd like to. This is a "catalogue of clothes for dogs" based project.
 
 ![screenshot](./public/screenshot.png)<br>
 ## Built With
 - CSS
+- HTML
 - JavaScript
 - React
 - Redux
 - API
 - NPM
 - Stylint
+- Jest
+- Enzyme
 
 ## Available Scripts
 
@@ -39,6 +42,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `Live link`
 [Link to Heroku](https://visva--starwars.herokuapp.com/)
+
+### `Video presentation`
+[Link to the Video](https://www.loom.com/share/435bf53af3524c49adb84f43d884481d)
 
 #### To get this project on your local machine, follow these steps:
 
