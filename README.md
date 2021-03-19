@@ -1,68 +1,83 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# React Calculator project
+
+This is the Capstone project at Microverse which uses the Star-Wars api. The app fetches the Star Wars characters 12 perpage and you can see more details of the character if you'd like to. This is a "catalogue of clothes for dogs" based project.
+
+![screenshot](./public/screenshot.png)<br>
+## Built With
+- CSS
+- HTML
+- JavaScript
+- React
+- Redux
+- API
+- NPM
+- Stylint
+- Jest
+- Enzyme
 
 ## Available Scripts
 
-In the project directory, you can run:
+### `npm start`
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
+Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
+Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
+The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `Live link`
+[Link to Heroku](https://visva--starwars.herokuapp.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `Video presentation`
+[Link to the Video](https://www.loom.com/share/435bf53af3524c49adb84f43d884481d)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### To get this project on your local machine, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Run this command `git clone https://github.com/visva-dev/React-Catalog.git` in the desired folder to clone the repository on to your local machine.
+After cloning the project, you should move into the directory where the project is stored, for example `cd react-catalog`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Then run the following command install the necessary dependencies
 
-## Learn More
+```bash
+    npm install
+```
+- Run `npm run start` to start the local server.
+- - Run `npm run test` to start the testing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Visvaldas Rapalis**
 
-### Code Splitting
+- Github: [@visva-dev](https://github.com/visva-dev)
+- Twitter: [@Visva_Dev](https://twitter.com/Visva_Dev)
+- Linkedin: [@Visvaldas-Rapalis](https://www.linkedin.com/in/visvaldas-rapalis/)
+- Website: [www.visva.tech](https://www.visva.tech/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Show your support
 
-### Analyzing the Bundle Size
+Give an ⭐️ if you like this project!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Acknowledgments
 
-### Making a Progressive Web App
+- The project was inspired by the [Microverse](https://www.microverse.org/) program.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## 📝 License
 
-### Advanced Configuration
+This project is [MIT](lic.url) licensed.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
