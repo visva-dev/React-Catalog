@@ -1,4 +1,4 @@
-# React Calculator project
+# React Catalog project
 
 This is the project which uses the Star-Wars api. The app fetches the Star Wars characters 12 perpage and you can see more details of the character if you'd like to. This is a "catalogue of clothes for dogs" based project.
 
